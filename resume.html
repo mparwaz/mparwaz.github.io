@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Muhammad Parwaz</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="images/x-icon" href="M.ico">
+    <link rel="icon" type="images/png" href="M.png">
+	<link rel="icon" sizes="16x16" href="M-16x16.png">
+    <link rel="icon" sizes="32x32" href="M-32x32.png">
+    <link rel="icon" sizes="48x48" href="M-48x48.png">
+
+    <script>
+        // Function to set the theme based on user preference
+        function setTheme(theme) {
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            localStorage.setItem('theme', theme); // Save preference to local storage
+        }
+
+        // Load theme from local storage or set default
+        function loadTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // Default to light
+            setTheme(theme);
+        }
+
+        // Toggle theme when button is clicked
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+
+        // Load theme on initial page load
+        window.onload = loadTheme;
+
+        // Add event listener to the toggle button
+        document.getElementById('modeToggle').addEventListener('click', toggleTheme);
+    </script>
+</head>
+<body>
+     <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="cheatsheet.html">Html Cheat Sheet</a></li>
+        </ul>
+    </div>
+
+    <!-- Header Section with Navigation -->
+    <header>
+        <div class="logo">
+            <h2>Muhammad Parwaz Personal Portfolio</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="cheatsheet.html">Html Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="resume">
+            <h1>Resume</h1>
+
+            <!-- Personal Details -->
+            <div class="resume-section">
+                <h2>Personal Details</h2>
+                <p><strong>Name:</strong> Muhammad Parwaz</p>
+                <p><strong>Email:</strong> <a href="mailto:mparwaz080@gmail.com">mparwaz080@gmail.com</a></p>
+                <p><strong>Phone:</strong> +1 (587) 429-0125</p>
+                <p><strong>Location:</strong> Calgary, Alberta, Canada</p>
+            </div>
+
+            <!-- Objective -->
+            <div class="resume-section">
+                <h2>Objective</h2>
+                <p>A graduate of Crescent Heights High School aspiring to become a computer programmer or nurse.</p>
+            </div>
+
+            <!-- Education -->
+            <div class="resume-section">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <strong>Bow Valley College</strong> - Calgary, Alberta (2022 - Present)
+                        <br>Diploma in Software Development
+                    </li>
+                    <li>
+                        <strong>Crescent Heights High School</strong> - Calgary, Alberta (2018 - 2021)
+                        <br>High School Diploma
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="resume-section">
+                <h2>Work Experience</h2>
+                <ul>
+                    <li>
+                        <strong>General Services</strong> - Loblaw Superstore (August 2022 - Present)
+                        <br>
+                    </li>
+                    <li>
+                        <strong></strong> 
+                        <br>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Volunteer Experience -->
+            <div class="resume-section">
+                <h2>Volunteer Experience</h2>
+                <ul>
+                    <li>
+                        <strong>Mustard Seed</strong> - Calgary, Alberta  
+                        Learned to cook and assisted in meal preparation.
+                    </li>
+                    <li>
+                        <strong>East Hills Family Medical Clinic</strong> - Calgary, Alberta  
+                        Assisted with clinic operations as a volunteer.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skills/Abilities -->
+            <div class="resume-section">
+                <h2>Skills/Abilities</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Responsive Web Design</li>
+                    <li>Version Control (Git/GitHub)</li>
+                    <li>Problem-solving and Debugging</li>
+                    <li>Basic Python Programming</li>
+                    <li>Positive attitude and behavior</li>
+                    <li>Creativity and innovation</li>
+                    <li>Teamwork</li>
+					<li>Reliability</li>
+					<li>Participation in projects and tasks</li>
+					<li>Decision making skills.</li>
+					<li>Listening skills</li>
+					<li>Strong work ethic</li>
+					
+                </ul>
+            </div>
+
+            <!-- Achievements -->
+            <div class="resume-section">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>September 2017: Passed Swimming Level 1.</li>
+                    <li>December 2018: Passed Skiing Levels 1 and 2.</li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="resume-section">
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <strong>Interactive Resume</strong> - A dynamic online resume built with HTML, CSS, and JavaScript.
+                    </li>
+                    <li>
+                        <strong>Personal Blog</strong> - A blog website designed to share thoughts and ideas on web development.
+                    </li>
+                    <li>
+                        <strong>Connect 3 Game</strong> - A simple game built using JavaScript and HTML5 canvas.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hobbies and Interests -->
+            <div class="resume-section">
+                <h2>Hobbies and Interests</h2>
+                <ul>
+                    <li>Basketball</li>
+                    <li>Badminton</li>
+                    <li>Hockey</li>
+                    <li>Cricket</li>
+                </ul>
+            </div>
+
+            <!-- References -->
+            <div class="resume-section">
+                <h2>References</h2>
+                <p>Available upon request.</p>
+            </div>
+        </section>
+    </main>
+
+   <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Muhammad Parwaz. All rights reserved.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/m-faaiz-parwaz-bb923923b/">LinkedIn</a> | <a href="https://github.com/aiwebsite123">GitHub</a></p>
+    </footer>
+
+    <button id="modeToggle">Toggle Light/Dark Mode</button>
+
+    <!-- External JavaScript File -->
+    <script src="scripts.js"></script>
+	<script>
+        // Mobile Menu Functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const menuIcon = document.querySelector('.menu-icon');
+
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            mobileMenuOverlay.style.display = mobileMenu.classList.contains('open') ? 'block' : 'none';
+            menuIcon.classList.toggle('open');
+        }
+
+        // Close mobile menu
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileMenuOverlay.style.display = 'none';
+            menuIcon.classList.remove('open');
+        }
+
+        // Event Listeners
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when a menu item is clicked
+        const mobileMenuItems = document.querySelectorAll('.mobile-menu ul li a');
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', closeMobileMenu);
+        });
+    </script>
+</body>
+</html>

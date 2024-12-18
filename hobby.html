@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby - Photography</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="images/x-icon" href="M.ico">
+    <link rel="icon" type="images/png" href="M.png">
+	<link rel="icon" sizes="16x16" href="M-16x16.png">
+    <link rel="icon" sizes="32x32" href="M-32x32.png">
+    <link rel="icon" sizes="48x48" href="M-48x48.png">
+
+    <script>
+        // Function to set the theme based on user preference
+        function setTheme(theme) {
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            localStorage.setItem('theme', theme); // Save preference to local storage
+        }
+    
+        // Load theme from local storage or set default
+        function loadTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // Default to light
+            setTheme(theme);
+        }
+    
+        // Toggle theme when button is clicked
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+    
+        // Load theme on initial page load
+        window.onload = loadTheme;
+    
+        // Add event listener to the toggle button
+        document.getElementById('modeToggle').addEventListener('click', toggleTheme);
+    </script>
+</head>
+<body>
+   <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="cheatsheet.html">Html Cheat Sheet</a></li>
+        </ul>
+    </div>
+
+    <!-- Header Section with Navigation -->
+    <header>
+        <div class="logo">
+            <h2>Muhammad Parwaz Personal Portfolio</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="cheatsheet.html">Html Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="hobby-introduction">
+            <h1>Photography - Capturing Moments</h1>
+            <p>Photography is one of my favorite hobbies. I enjoy capturing beautiful moments, landscapes, and candid shots of people. It allows me to express my creativity and see the world from different perspectives.</p>
+        </section>
+
+        <section id="why-i-love-photography">
+            <h2>Why I Love Photography</h2>
+            <ul>
+                <li>It helps me capture memories and preserve them forever.</li>
+                <li>It allows me to explore and appreciate the beauty in everyday life.</li>
+                <li>Photography is a great way to express creativity and storytelling.</li>
+                <li>It encourages me to travel and discover new places.</li>
+            </ul>
+        </section>
+
+       <section id="my-photography-gear">
+    <h2>My Photography Gear</h2>
+    <p>Here are some of the tools I use for my photography:</p>
+    <ul>
+        <li><strong>Camera:</strong> Canon EOS R6 - a versatile mirrorless camera.</li>
+        <li><strong>Lenses:</strong> 
+            <ul>
+                <li>Canon RF 24-70mm f/2.8L IS USM</li>
+                <li>Canon RF 50mm f/1.2L USM</li>
+            </ul>
+        </li>
+        <li><strong>Smartphone Camera:</strong> Samsung Galaxy S23+ 
+            <ul>
+                <li><strong>Primary Camera:</strong> 50 MP (wide), with f/1.8 aperture, PDAF, and OIS</li>
+                <li><strong>Ultra-Wide Camera:</strong> 12 MP, f/2.2, 120° field of view</li>
+                <li><strong>Telephoto Camera:</strong> 10 MP, f/2.4, 3x optical zoom</li>
+                <li><strong>Front Camera:</strong> 12 MP, f/2.2, wide-angle for selfies</li>
+                <li>Features: 8K video recording, Super HDR, and advanced night photography modes.</li>
+            </ul>
+        </li>
+        <li><strong>Tripod:</strong> Manfrotto Befree Advanced Carbon Fiber Travel Tripod.</li>
+        <li><strong>Editing Software:</strong> Adobe Lightroom and Photoshop.</li>
+    </ul>
+</section>
+
+
+        <section id="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <p>Here are some of my favorite shots:</p>
+            <div class="gallery">
+                <img src="images/Landscape.jpg" alt="Landscape Photography">
+                <img src="images/me.jpg" alt="Portrait Photography">
+                <img src="images/street.jpg" alt="Street Photography">
+                <img src="images/Nature.jpg" alt="Nature Photography">
+				 <img src="images/street2.jpg" alt="Street Photography">
+				 <img src="images/street3.jpg" alt="Street Photography">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Muhammad Parwaz. All rights reserved.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/m-faaiz-parwaz-bb923923b/">LinkedIn</a> | <a href="https://github.com/aiwebsite123">GitHub</a></p>
+    </footer>
+
+    <button id="modeToggle">Toggle Light/Dark Mode</button>
+
+    <!-- External JavaScript File -->
+    <script src="scripts.js"></script>
+	<script>
+        // Mobile Menu Functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const menuIcon = document.querySelector('.menu-icon');
+
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            mobileMenuOverlay.style.display = mobileMenu.classList.contains('open') ? 'block' : 'none';
+            menuIcon.classList.toggle('open');
+        }
+
+        // Close mobile menu
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileMenuOverlay.style.display = 'none';
+            menuIcon.classList.remove('open');
+        }
+
+        // Event Listeners
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when a menu item is clicked
+        const mobileMenuItems = document.querySelectorAll('.mobile-menu ul li a');
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', closeMobileMenu);
+        });
+    </script>
+
+</body>
+</html>
